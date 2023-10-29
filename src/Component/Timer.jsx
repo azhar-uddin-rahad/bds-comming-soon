@@ -10,7 +10,7 @@ const Timer = () => {
   
     let interval;
     const startTimer=()=>{
-        const countDownDate=new Date("December 25,2023").getTime();
+        const countDownDate=new Date("December 12,2023").getTime();
         interval=setInterval(()=>{
             const now=new Date().getTime();
             const distance=countDownDate-now;
