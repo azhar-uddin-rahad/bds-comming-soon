@@ -10,6 +10,10 @@ export default {
         'inter': ['Inter'],
         'poppins': ['Poppins']
       },
+      screens: {
+        'es': '410px',
+        
+      },
 
 
     },

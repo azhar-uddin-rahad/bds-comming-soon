@@ -24,11 +24,11 @@ const VideoPlayer = () => {
   return (
     <div>
       <div className="relative">
-        <div className="w-full h-[500px] pt-[100px]">
-         <img className="w-full object-content  h-full border-[10px] border-solid border-[#fff] rounded-xl" src={banner} alt="" />
+        <div className="w-full 2xl:h-[600px] xl:h-[500px] lg:h-[400px] lg:w-full sm:h-[70%] h-[300px] pt-[100px] rounded-xl">
+         <img className="w-full h-full border-[10px] border-solid border-[#fff] rounded-xl" src={banner} alt="" />
         </div>
         <button
-          className="absolute lg:top-[60%] lg:left-[40%]  top-[60%] left-[40%]"
+          className="absolute lg:top-[60%]  sm:left-[45%] top-[60%] left-[40%]"
           onClick={handlePlayVideo} 
         >
           <span class="relative flex h-11 w-11">
@@ -60,19 +60,10 @@ const VideoPlayer = () => {
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <video ref={videoRef} width="750" height="500" controls autoplay loop>
+                  <video ref={videoRef} width="550" height="400" controls autoplay loop>
                     <source src={BDS} type="video/mp4" />
                   </video>
-                  {/* <iframe
-                    width="500"
-                    className="rounded-xl"
-                    height="350"
-                    src="https://drive.google.com/file/d/1cZfeMY9Yo_7Ez1aVqbZkHg4ZPzbPzbR7/view"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen
-                  ></iframe> */}
+                  
                 </div>
               </div>
             </div>
@@ -81,36 +72,7 @@ const VideoPlayer = () => {
         </>
       ) : null}
 
-      {/*  <dialog id="my_modal_2" className="modal">
-        <div className="modal-box w-[700px] h-[400px] overflow-y-hidden">
-          <iframe
-            width="500"
-            className="rounded-xl"
-            height="350"
-            src="https://www.youtube-nocookie.com/embed/BTIA7_OX8Go?si=JRjDUcadlFzG2T6d"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-        <form method="dialog" className="modal-backdrop">
-          <button>close</button>
-        </form>
-      </dialog> */}
-
-      {/*     <button className="btn" onClick={()=>document.getElementById('my_modal_2').showModal()}>open modal</button>
-<dialog id="my_modal_2" className="modal">
-  <div className="modal-box">
-  <div className="rounded-xl">
-       
-      </div>
-      <form method="dialog" className="modal-backdrop">
-    <button>close</button>
-  </form>
-  </div>
- 
-</dialog> */}
+      
     </div>
   );
 };
